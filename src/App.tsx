@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Upscaler from 'upscaler';
-import ESRGANSlim from '@upscalerjs/esrgan-slim';
+import { x2 } from '@upscalerjs/esrgan-slim';
 import { ReactCompareSlider, ReactCompareSliderImage } from 'react-compare-slider';
 import { Upload, Download, Twitter, Sparkles, RefreshCw, Github } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -12,7 +12,7 @@ function cn(...inputs: ClassValue[]) {
 }
 
 const upscaler = new Upscaler({
-  model: ESRGANSlim,
+  model: x2,
 });
 
 function App() {
